@@ -59,6 +59,7 @@ int main() {
     } else {
         printf("O valor %d ocorre nos índices: primeiro = %d, último = %d\n", number, first, last);
     }
-
+    
+    
     return EXIT_SUCCESS;
 }

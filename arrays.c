@@ -30,3 +30,22 @@ int arrayLastIndexOf(int val, const int arr[], int length){
 
     return lastIndex;
 }
+
+void arraySort(int arr[], int arrLength, bool ascending){
+    /* 
+    int i, j;
+    bool swapped;
+    for (i = 0; i < arrLength - 1; i++) {
+        swapped = false;
+        for (j = 0; j < arrLength - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+ 
+        if (swapped == false){
+            break;
+        }
+    } */
+}
