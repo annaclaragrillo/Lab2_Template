@@ -23,14 +23,41 @@ int main() {
             };
 
     
-    printArray(seq,50);
-    
-    int val=52;
-    int index= arrayFirstIndexOf(val, seq, 50);
+    //printArray(seq,50);
+
+    int val = 52;
+    int index = arrayFirstIndexOf(val, seq, 50);
     if(index != -1){
-        printf("O valor %d foi encontrado no índice %d.\n", val, index);
+        printf("O valor %d foi encontrado pela primeira vez no índice %d.\n", val, index);
     } else {
         printf("O valor %d não foi encontrado.\n", val);
+    }
+
+   int value = 1;
+   int i = arrayLastIndexOf(value, seq, 50);
+    if(index != -1){
+        printf("O valor %d foi encontrado pela última vez no índice %d.\n", value, i);
+    } else {
+        printf("O valor %d não foi encontrado.\n", value);
+    }
+    
+    printf("Sequência seq: ");
+    for (int i = 0; i < 50; i++) {
+        printf("%d ", seq[i]);
+    }
+    printf("\n");
+
+    int number;
+    printf("Digite o valor a pesquisar: ");
+    readInteger(&number);
+    
+    int first = arrayFirstIndexOf(number, seq, 50);
+    int last = arrayLastIndexOf(number, seq, 50);
+
+    if (first == -1) {
+        printf("O valor %d não existe na sequência.\n", number);
+    } else {
+        printf("O valor %d ocorre nos índices: primeiro = %d, último = %d\n", number, first, last);
     }
 
     return EXIT_SUCCESS;

@@ -18,3 +18,15 @@ int arrayFirstIndexOf(int val, const int arr[], int length) {
     }
     return -1; 
 }
+
+int arrayLastIndexOf(int val, const int arr[], int length){
+    int lastIndex = -1;
+
+    for(int i = 0; i < length; i++){
+        if(arr[i] == val){
+            lastIndex = i;
+        }
+    }
+
+    return lastIndex;
+}
