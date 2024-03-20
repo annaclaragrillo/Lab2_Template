@@ -1,9 +1,10 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include "input.h"
+#include "arrays.h"
 
 int main() {
-
+        
     int seq[50] = {
             93, 32, 31, 36, 60, 1, 74, 87, 52, 2,
             76, 54, 74, 17, 90, 81, 96, 72, 22, 31,
@@ -21,8 +22,16 @@ int main() {
             {5,42, 9,31,27}
             };
 
-    /* Program code. */
-    printf("I do nothing at this moment.\n");
- 
+    
+    printArray(seq,50);
+    
+    int val=52;
+    int index= arrayFirstIndexOf(val, seq, 50);
+    if(index != -1){
+        printf("O valor %d foi encontrado no índice %d.\n", val, index);
+    } else {
+        printf("O valor %d não foi encontrado.\n", val);
+    }
+
     return EXIT_SUCCESS;
 }
